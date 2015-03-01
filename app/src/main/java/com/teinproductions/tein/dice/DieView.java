@@ -1,8 +1,8 @@
 package com.teinproductions.tein.dice;
 
 import android.content.Context;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.util.AttributeSet;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -17,28 +17,40 @@ public class DieView extends FrameLayout {
 
     private int pips = SIX;
     private ImageView mImageView;
+    private AnimatedVectorDrawable mDrawable;
 
     public int getPips() {
         return pips;
     }
 
-    public void setPips() {
+    public void setPips(int pips) {
+        if (pips < 1 || pips > 6) {
+            throw new IllegalArgumentException("number of pips must ly between 1 and 6");
+        }
 
+        this.pips = pips;
     }
 
     public DieView(Context context) {
         super(context);
+    }
 
+    public void toTwo() {
+        mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
+        mImageView.setBackground(mDrawable);
+
+        mDrawable.start();
+        setPips(2);
     }
 
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         mImageView = new ImageView(getContext());
-        mImageView.setBackgroundResource(R.drawable.die_view);
+        mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
 
+        mImageView.setBackground(mDrawable);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-
         this.addView(mImageView, params);
     }
 

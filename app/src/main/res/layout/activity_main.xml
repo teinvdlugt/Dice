@@ -9,6 +9,14 @@
     tools:context=".MainActivity">
 
     <com.teinproductions.tein.dice.DieView
+        android:id="@+id/die_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <Button
+        android:text="Two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickButton" />
 </RelativeLayout>

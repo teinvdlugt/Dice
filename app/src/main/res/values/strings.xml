@@ -3,4 +3,22 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Path data -->
+    <string name="left_up_big" translatable="false">M 27 35 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+    <string name="left_middle_big" translatable="false">M 27 60 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+    <string name="left_down_big" translatable="false">M 27 85 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+    <string name="middle_big" translatable="false">M 52 60 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+    <string name="right_up_big" translatable="false">M 77 35 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+    <string name="right_middle_big" translatable="false">M 77 60 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+    <string name="right_down_big" translatable="false">M 77 85 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
+
+    <string name="left_up_small" translatable="false">M 34 35 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+    <string name="left_middle_small" translatable="false">M 34 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+    <string name="left_down_small" translatable="false">M 34 85 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+    <string name="middle_small" translatable="false">M 59 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+    <string name="right_up_small" translatable="false">M 84 35 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+    <string name="right_middle_small" translatable="false">M 84 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+    <string name="right_down_small" translatable="false">M 84 85 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
+
 </resources>
