@@ -42,12 +42,12 @@
         <path
             android:name="left_down"
             android:fillColor="@android:color/black"
-            android:pathData="@string/middle_gone"
+            android:pathData="@string/left_down_big"
             android:strokeAlpha="0" />
         <path
             android:name="right_up"
             android:fillColor="@android:color/black"
-            android:pathData="@string/middle_gone"
+            android:pathData="@string/right_up_big"
             android:strokeAlpha="0" />
         <path
             android:name="right_middle"

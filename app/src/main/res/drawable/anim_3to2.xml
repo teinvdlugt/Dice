@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/drawable_3">
+
+    <target
+        android:animation="@anim/middle_to_left_down_dsc"
+        android:name="middle" />
+    <target
+        android:animation="@anim/middle_to_right_up_dsc"
+        android:name="right_down" />
+
+</animated-vector>

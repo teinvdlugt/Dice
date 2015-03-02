@@ -43,10 +43,14 @@ public class MainActivity extends Activity {
     }
 
     public void onClickOne(View view) {
-        mDieView.toOne();
+        mDieView.setPips(DieView.ONE);
     }
 
     public void onClickTwo(View view) {
-        mDieView.toTwo();
+        mDieView.setPips(DieView.TWO);
+    }
+
+    public void onClickThree(View view) {
+        mDieView.setPips(DieView.THREE);
     }
 }

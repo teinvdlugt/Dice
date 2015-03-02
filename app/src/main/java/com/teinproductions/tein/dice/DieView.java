@@ -5,6 +5,7 @@ import android.graphics.drawable.AnimatedVectorDrawable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class DieView extends FrameLayout {
 
@@ -18,6 +19,7 @@ public class DieView extends FrameLayout {
     private int pips = ONE;
     private ImageView mImageView;
     private AnimatedVectorDrawable mDrawable;
+    private int drawableResource = R.drawable.anim_1to2;
 
     public int getPips() {
         return pips;
@@ -26,27 +28,33 @@ public class DieView extends FrameLayout {
     public void setPips(int pips) {
         if (pips < 1 || pips > 6) {
             throw new IllegalArgumentException("number of pips must ly between 1 and 6");
+        } else if (pips == this.pips) {
+            return;
         }
 
+        switch(pips) {
+            case ONE:
+                toOne();
+                break;
+            case TWO:
+                toTwo();
+                break;
+            case THREE:
+                toThree();
+                break;
+            default:
+                return;
+        }
+
+        mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(drawableResource);
+        mImageView.setBackground(mDrawable);
+        mDrawable.start();
         this.pips = pips;
+        Toast.makeText(getContext(), ""+pips, Toast.LENGTH_SHORT).show();
     }
 
     public DieView(Context context) {
         super(context);
-    }
-
-    public void toTwo() {
-        switch (pips) {
-            case ONE:
-                mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
-                break;
-            case TWO:
-                return;
-        }
-
-        mImageView.setBackground(mDrawable);
-        mDrawable.start();
-        setPips(TWO);
     }
 
     public void toOne() {
@@ -54,13 +62,37 @@ public class DieView extends FrameLayout {
             case ONE:
                 return;
             case TWO:
-                mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_2to1);
+                drawableResource = R.drawable.anim_2to1;
+                break;
+            case THREE:
+                drawableResource = R.drawable.anim_3to1;
+        }
+    }
+
+    public void toTwo() {
+        switch (pips) {
+            case ONE:
+                drawableResource = R.drawable.anim_1to2;
+                break;
+            case TWO:
+                return;
+            case THREE:
+                drawableResource = R.drawable.anim_3to2;
                 break;
         }
+    }
 
-        mImageView.setBackground(mDrawable);
-        mDrawable.start();
-        setPips(ONE);
+    public void toThree() {
+        switch (pips) {
+            case ONE:
+                drawableResource = R.drawable.anim_1to2;
+                break;
+            case TWO:
+                drawableResource = R.drawable.anim_2to3;
+                break;
+            case THREE:
+                break;
+        }
     }
 
     @Override
@@ -68,7 +100,7 @@ public class DieView extends FrameLayout {
         super.onAttachedToWindow();
         mImageView = new ImageView(getContext());
         mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
-        setPips(ONE);
+        this.pips = ONE;
 
         mImageView.setBackground(mDrawable);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);

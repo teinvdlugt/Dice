@@ -13,14 +13,12 @@
     <string name="right_middle_big" translatable="false">M 77 60 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
     <string name="right_down_big" translatable="false">M 77 85 a 8 8 0 1 0 16 0 a 8 8 0 1 0 -16 0</string>
 
-    <string name="left_up_small" translatable="false">M 34 35 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-    <string name="left_middle_small" translatable="false">M 34 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-    <string name="left_down_small" translatable="false">M 34 85 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-    <string name="middle_small" translatable="false">M 59 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-    <string name="right_up_small" translatable="false">M 84 35 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-    <string name="right_middle_small" translatable="false">M 84 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-    <string name="right_down_small" translatable="false">M 84 85 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
-
+    <string name="left_up_gone" translatable="false">M 35 35 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+    <string name="left_middle_gone" translatable="false">M 35 60 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+    <string name="left_down_gone" translatable="false">M 35 85 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
     <string name="middle_gone" translatable="false">M 60 60 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+    <string name="right_up_gone" translatable="false">M 85 35 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+    <string name="right_middle_gone" translatable="false">M 85 60 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+    <string name="right_down_gone" translatable="false">M 85 85 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
 
 </resources>

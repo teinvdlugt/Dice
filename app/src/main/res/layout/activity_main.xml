@@ -14,10 +14,18 @@
         android:layout_height="match_parent" />
 
     <Button
-        android:id="@+id/two"
+        android:id="@+id/three"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:onClick="onClickThree"
+        android:text="Three" />
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/three"
         android:onClick="onClickTwo"
         android:text="Two" />
 
