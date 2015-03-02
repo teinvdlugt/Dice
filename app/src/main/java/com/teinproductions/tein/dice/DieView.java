@@ -5,7 +5,6 @@ import android.graphics.drawable.AnimatedVectorDrawable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class DieView extends FrameLayout {
 
@@ -45,6 +44,9 @@ public class DieView extends FrameLayout {
             case FOUR:
                 toFour();
                 break;
+            case FIVE:
+                toFive();
+                break;
             default:
                 return;
         }
@@ -71,6 +73,9 @@ public class DieView extends FrameLayout {
                 break;
             case FOUR:
                 drawableResource = R.drawable.anim_4to1;
+                break;
+            case FIVE:
+                drawableResource = R.drawable.anim_5to1;
         }
     }
 
@@ -86,6 +91,9 @@ public class DieView extends FrameLayout {
                 break;
             case FOUR:
                 drawableResource = R.drawable.anim_4to2;
+                break;
+            case FIVE:
+                drawableResource = R.drawable.anim_5to2;
         }
     }
 
@@ -101,6 +109,9 @@ public class DieView extends FrameLayout {
                 return;
             case FOUR:
                 drawableResource = R.drawable.anim_4to3;
+                break;
+            case FIVE:
+                drawableResource = R.drawable.anim_5to3;
         }
     }
 
@@ -116,6 +127,29 @@ public class DieView extends FrameLayout {
                 drawableResource = R.drawable.anim_3to4;
                 break;
             case FOUR:
+                return;
+            case FIVE:
+                drawableResource = R.drawable.anim_5to4;
+            default:
+                break;
+        }
+    }
+
+    public void toFive() {
+        switch (pips) {
+            case ONE:
+                drawableResource = R.drawable.anim_1to5;
+                break;
+            case TWO:
+                drawableResource = R.drawable.anim_2to5;
+                break;
+            case THREE:
+                drawableResource = R.drawable.anim_3to5;
+                break;
+            case FOUR:
+                drawableResource = R.drawable.anim_4to5;
+                break;
+            case FIVE:
                 return;
             default:
                 break;

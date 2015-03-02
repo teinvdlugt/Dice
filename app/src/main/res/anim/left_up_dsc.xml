@@ -6,6 +6,6 @@
         android:propertyName="pathData"
         android:valueFrom="@string/left_up_big"
         android:valueTo="@string/left_up_gone"
-        android:valueType="pathType"/>
+        android:valueType="pathType" />
 
 </set>

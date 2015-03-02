@@ -59,6 +59,12 @@
             android:fillColor="@android:color/black"
             android:pathData="@string/middle_gone"
             android:strokeAlpha="0" />
+
+        <path
+            android:name="extra1"
+            android:fillColor="@android:color/black"
+            android:pathData="@string/middle_gone"
+            android:strokeAlpha="0" />
     </group>
 
 </vector>

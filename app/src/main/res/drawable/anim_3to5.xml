@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/drawable_3">
+
+    <target
+        android:name="left_up"
+        android:animation="@anim/middle_to_left_up_asc" />
+    <target
+        android:name="right_down"
+        android:animation="@anim/middle_to_right_down_asc" />
+    <target
+        android:name="left_middle"
+        android:animation="@anim/left_down_to_left_up_asc" />
+    <target
+        android:name="right_middle"
+        android:animation="@anim/right_up_to_left_up_asc" />
+    <target
+        android:name="extra1"
+        android:animation="@anim/right_up_to_right_down_asc" />
+    <target
+        android:name="extra2"
+        android:animation="@anim/left_down_to_right_down_asc" />
+
+</animated-vector>
