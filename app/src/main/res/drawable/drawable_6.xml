@@ -27,7 +27,7 @@
         <path
             android:name="middle"
             android:fillColor="@android:color/black"
-            android:pathData="@string/middle_big"
+            android:pathData="@string/middle_gone"
             android:strokeAlpha="0" />
         <path
             android:name="left_up"
@@ -37,7 +37,7 @@
         <path
             android:name="left_middle"
             android:fillColor="@android:color/black"
-            android:pathData="@string/left_middle_gone"
+            android:pathData="@string/left_middle_big"
             android:strokeAlpha="0" />
         <path
             android:name="left_down"
@@ -52,7 +52,7 @@
         <path
             android:name="right_middle"
             android:fillColor="@android:color/black"
-            android:pathData="@string/right_middle_gone"
+            android:pathData="@string/right_middle_big"
             android:strokeAlpha="0" />
         <path
             android:name="right_down"

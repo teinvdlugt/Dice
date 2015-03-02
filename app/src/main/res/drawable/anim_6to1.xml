@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/drawable_6">
+
+    <target
+        android:name="left_up"
+        android:animation="@anim/left_up_to_middle_dsc" />
+    <target
+        android:name="left_middle"
+        android:animation="@anim/left_middle_dsc" />
+    <target
+        android:name="left_down"
+        android:animation="@anim/left_down_to_middle_dsc" />
+    <target
+        android:name="right_up"
+        android:animation="@anim/right_up_to_middle_dsc" />
+    <target
+        android:name="right_middle"
+        android:animation="@anim/right_middle_dsc" />
+    <target
+        android:name="right_down"
+        android:animation="@anim/right_down_to_middle_dsc" />
+    <target
+        android:name="middle"
+        android:animation="@anim/middle_asc" />
+
+</animated-vector>

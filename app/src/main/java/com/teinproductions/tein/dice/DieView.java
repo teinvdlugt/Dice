@@ -47,8 +47,8 @@ public class DieView extends FrameLayout {
             case FIVE:
                 toFive();
                 break;
-            default:
-                return;
+            case SIX:
+                toSix();
         }
 
         mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(drawableResource);
@@ -76,6 +76,11 @@ public class DieView extends FrameLayout {
                 break;
             case FIVE:
                 drawableResource = R.drawable.anim_5to1;
+                break;
+            case SIX:
+                drawableResource = R.drawable.anim_6to1;
+            default:
+                break;
         }
     }
 
@@ -94,6 +99,11 @@ public class DieView extends FrameLayout {
                 break;
             case FIVE:
                 drawableResource = R.drawable.anim_5to2;
+                break;
+            case SIX:
+                drawableResource = R.drawable.anim_6to2;
+            default:
+                break;
         }
     }
 
@@ -112,6 +122,11 @@ public class DieView extends FrameLayout {
                 break;
             case FIVE:
                 drawableResource = R.drawable.anim_5to3;
+                break;
+            case SIX:
+                drawableResource = R.drawable.anim_6to3;
+            default:
+                break;
         }
     }
 
@@ -130,6 +145,9 @@ public class DieView extends FrameLayout {
                 return;
             case FIVE:
                 drawableResource = R.drawable.anim_5to4;
+                break;
+            case SIX:
+                drawableResource = R.drawable.anim_6to4;
             default:
                 break;
         }
@@ -150,6 +168,33 @@ public class DieView extends FrameLayout {
                 drawableResource = R.drawable.anim_4to5;
                 break;
             case FIVE:
+                return;
+            case SIX:
+                drawableResource = R.drawable.anim_6to5;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void toSix() {
+        switch (pips) {
+            case ONE:
+                drawableResource = R.drawable.anim_1to6;
+                break;
+            case TWO:
+                drawableResource = R.drawable.anim_2to6;
+                break;
+            case THREE:
+                drawableResource = R.drawable.anim_3to6;
+                break;
+            case FOUR:
+                drawableResource = R.drawable.anim_4to6;
+                break;
+            case FIVE:
+                drawableResource = R.drawable.anim_5to6;
+                break;
+            case SIX:
                 return;
             default:
                 break;

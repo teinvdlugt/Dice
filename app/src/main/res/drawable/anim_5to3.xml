@@ -3,16 +3,16 @@
     android:drawable="@drawable/drawable_5">
 
     <target
-        android:animation="@anim/left_up_to_middle_dsc"
-        android:name="left_up" />
+        android:name="left_up"
+        android:animation="@anim/left_up_to_middle_dsc" />
     <target
-        android:animation="@anim/left_up_to_right_up_dsc"
-        android:name="left_middle" />
+        android:name="left_middle"
+        android:animation="@anim/left_up_to_right_up_dsc" />
     <target
-        android:animation="@anim/right_down_to_middle_dsc"
-        android:name="right_down" />
+        android:name="right_down"
+        android:animation="@anim/right_down_to_middle_dsc" />
     <target
-        android:animation="@anim/right_down_to_left_down_dsc"
-        android:name="right_middle" />
+        android:name="right_middle"
+        android:animation="@anim/right_down_to_left_down_dsc" />
 
 </animated-vector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/drawable_5">
+
+    <target
+        android:name="middle"
+        android:animation="@anim/middle_dsc" />
+    <target
+        android:name="left_middle"
+        android:animation="@anim/middle_to_left_middle_asc" />
+    <target
+        android:name="right_middle"
+        android:animation="@anim/middle_to_right_middle_asc" />
+
+</animated-vector>
