@@ -9,4 +9,20 @@
         android:animation="@anim/middle_to_left_down"
         android:name="left_down" />
 
+    <target
+        android:animation="@anim/middle_disappear"
+        android:name="middle" />
+    <target
+        android:animation="@anim/middle_disappear"
+        android:name="left_up" />
+    <target
+        android:animation="@anim/middle_disappear"
+        android:name="left_middle" />
+    <target
+        android:animation="@anim/middle_disappear"
+        android:name="right_middle" />
+    <target
+        android:animation="@anim/middle_disappear"
+        android:name="right_down" />
+
 </animated-vector>

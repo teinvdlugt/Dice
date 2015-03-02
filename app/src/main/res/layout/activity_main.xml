@@ -14,9 +14,18 @@
         android:layout_height="match_parent" />
 
     <Button
-        android:text="Two"
+        android:id="@+id/two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:onClick="onClickButton" />
+        android:onClick="onClickTwo"
+        android:text="Two" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/two"
+        android:onClick="onClickOne"
+        android:text="One" />
 </RelativeLayout>

@@ -42,7 +42,11 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClickButton(View view) {
+    public void onClickOne(View view) {
+        mDieView.toOne();
+    }
+
+    public void onClickTwo(View view) {
         mDieView.toTwo();
     }
 }

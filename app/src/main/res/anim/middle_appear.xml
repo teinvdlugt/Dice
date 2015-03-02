@@ -4,8 +4,8 @@
     <objectAnimator
         android:duration="200"
         android:propertyName="pathData"
-        android:valueFrom="@string/middle_small"
-        android:valueTo="@string/left_down_big"
+        android:valueFrom="@string/middle_gone"
+        android:valueTo="@string/middle_big"
         android:valueType="pathType"/>
 
 </set>

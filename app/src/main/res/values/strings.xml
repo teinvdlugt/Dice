@@ -21,4 +21,6 @@
     <string name="right_middle_small" translatable="false">M 84 60 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
     <string name="right_down_small" translatable="false">M 84 85 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0</string>
 
+    <string name="middle_gone" translatable="false">M 60 60 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+
 </resources>

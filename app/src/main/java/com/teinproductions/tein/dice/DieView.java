@@ -15,7 +15,7 @@ public class DieView extends FrameLayout {
     public static final int FIVE = 5;
     public static final int SIX = 6;
 
-    private int pips = SIX;
+    private int pips = ONE;
     private ImageView mImageView;
     private AnimatedVectorDrawable mDrawable;
 
@@ -36,11 +36,31 @@ public class DieView extends FrameLayout {
     }
 
     public void toTwo() {
-        mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
-        mImageView.setBackground(mDrawable);
+        switch (pips) {
+            case ONE:
+                mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
+                break;
+            case TWO:
+                return;
+        }
 
+        mImageView.setBackground(mDrawable);
         mDrawable.start();
-        setPips(2);
+        setPips(TWO);
+    }
+
+    public void toOne() {
+        switch (pips) {
+            case ONE:
+                return;
+            case TWO:
+                mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_2to1);
+                break;
+        }
+
+        mImageView.setBackground(mDrawable);
+        mDrawable.start();
+        setPips(ONE);
     }
 
     @Override
@@ -48,6 +68,7 @@ public class DieView extends FrameLayout {
         super.onAttachedToWindow();
         mImageView = new ImageView(getContext());
         mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
+        setPips(ONE);
 
         mImageView.setBackground(mDrawable);
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
