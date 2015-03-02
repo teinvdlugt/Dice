@@ -32,7 +32,7 @@ public class DieView extends FrameLayout {
             return;
         }
 
-        switch(pips) {
+        switch (pips) {
             case ONE:
                 toOne();
                 break;
@@ -42,6 +42,9 @@ public class DieView extends FrameLayout {
             case THREE:
                 toThree();
                 break;
+            case FOUR:
+                toFour();
+                break;
             default:
                 return;
         }
@@ -50,7 +53,6 @@ public class DieView extends FrameLayout {
         mImageView.setBackground(mDrawable);
         mDrawable.start();
         this.pips = pips;
-        Toast.makeText(getContext(), ""+pips, Toast.LENGTH_SHORT).show();
     }
 
     public DieView(Context context) {
@@ -66,6 +68,9 @@ public class DieView extends FrameLayout {
                 break;
             case THREE:
                 drawableResource = R.drawable.anim_3to1;
+                break;
+            case FOUR:
+                drawableResource = R.drawable.anim_4to1;
         }
     }
 
@@ -79,18 +84,40 @@ public class DieView extends FrameLayout {
             case THREE:
                 drawableResource = R.drawable.anim_3to2;
                 break;
+            case FOUR:
+                drawableResource = R.drawable.anim_4to2;
         }
     }
 
     public void toThree() {
         switch (pips) {
             case ONE:
-                drawableResource = R.drawable.anim_1to2;
+                drawableResource = R.drawable.anim_1to3;
                 break;
             case TWO:
                 drawableResource = R.drawable.anim_2to3;
                 break;
             case THREE:
+                return;
+            case FOUR:
+                drawableResource = R.drawable.anim_4to3;
+        }
+    }
+
+    public void toFour() {
+        switch (pips) {
+            case ONE:
+                drawableResource = R.drawable.anim_1to4;
+                break;
+            case TWO:
+                drawableResource = R.drawable.anim_2to4;
+                break;
+            case THREE:
+                drawableResource = R.drawable.anim_3to4;
+                break;
+            case FOUR:
+                return;
+            default:
                 break;
         }
     }
