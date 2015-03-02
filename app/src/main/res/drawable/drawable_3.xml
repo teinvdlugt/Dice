@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="256dp"
-    android:height="256dp"
-    android:viewportHeight="200"
-    android:viewportWidth="200">
+    android:width="152dp"
+    android:height="152dp"
+    android:viewportHeight="120"
+    android:viewportWidth="120">
 
-    <group
-        android:name="die"
-        android:pivotX="75"
-        android:pivotY="65">
-
-        <path
-            android:fillAlpha="0"
-            android:pathData="M 30 10
+    <path
+        android:fillAlpha="0"
+        android:pathData="M 30 10
             l 60 0
             a 20 20 0 0 1 20 20
             l 0 60
@@ -21,55 +16,54 @@
             a 20 20 0 0 1 -20 -20
             l 0 -60
             a 20 20 0 0 1 20 -20"
-            android:strokeColor="@android:color/black"
-            android:strokeWidth="3" />
+        android:strokeColor="@android:color/black"
+        android:strokeWidth="3" />
 
-        <path
-            android:name="middle"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/middle_big"
-            android:strokeAlpha="0" />
-        <path
-            android:name="left_up"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/left_up_gone"
-            android:strokeAlpha="0" />
-        <path
-            android:name="left_middle"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/left_middle_gone"
-            android:strokeAlpha="0" />
-        <path
-            android:name="left_down"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/left_down_big"
-            android:strokeAlpha="0" />
-        <path
-            android:name="right_up"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/right_up_big"
-            android:strokeAlpha="0" />
-        <path
-            android:name="right_middle"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/right_middle_gone"
-            android:strokeAlpha="0" />
-        <path
-            android:name="right_down"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/right_down_gone"
-            android:strokeAlpha="0" />
+    <path
+        android:name="middle"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/middle_big"
+        android:strokeAlpha="0" />
+    <path
+        android:name="left_up"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/left_up_gone"
+        android:strokeAlpha="0" />
+    <path
+        android:name="left_middle"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/left_middle_gone"
+        android:strokeAlpha="0" />
+    <path
+        android:name="left_down"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/left_down_big"
+        android:strokeAlpha="0" />
+    <path
+        android:name="right_up"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/right_up_big"
+        android:strokeAlpha="0" />
+    <path
+        android:name="right_middle"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/right_middle_gone"
+        android:strokeAlpha="0" />
+    <path
+        android:name="right_down"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/right_down_gone"
+        android:strokeAlpha="0" />
 
-        <path
-            android:name="extra1"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/middle_gone"
-            android:strokeAlpha="0" />
-        <path
-            android:name="extra2"
-            android:fillColor="@android:color/black"
-            android:pathData="@string/middle_gone"
-            android:strokeAlpha="0" />
-    </group>
+    <path
+        android:name="extra1"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/middle_gone"
+        android:strokeAlpha="0" />
+    <path
+        android:name="extra2"
+        android:fillColor="@android:color/black"
+        android:pathData="@string/middle_gone"
+        android:strokeAlpha="0" />
 
 </vector>

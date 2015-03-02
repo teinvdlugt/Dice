@@ -20,5 +20,8 @@
     <string name="right_up_gone" translatable="false">M 85 35 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
     <string name="right_middle_gone" translatable="false">M 85 60 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
     <string name="right_down_gone" translatable="false">M 85 85 a 0 0 0 1 0 0 0 a 0 0 0 1 0 0 0</string>
+    <string name="go">Go</string>
+    <string name="dance">Dance</string>
+    <string name="stop_dancing">Stop Dancing</string>
 
 </resources>

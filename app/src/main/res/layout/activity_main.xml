@@ -9,55 +9,29 @@
     tools:context=".MainActivity">
 
     <com.teinproductions.tein.dice.DieView
-        android:id="@+id/die_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:id="@+id/die_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.teinproductions.tein.dice.DieView
+        android:id="@+id/die_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/die_view1" />
 
     <Button
-        android:id="@+id/six"
+        android:id="@+id/dance_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:onClick="onClickSix"
-        android:text="Six" />
+        android:onClick="onClickDance"
+        android:text="@string/dance" />
 
     <Button
-        android:id="@+id/five"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/six"
-        android:onClick="onClickFive"
-        android:text="Five" />
+        android:layout_above="@id/dance_button"
+        android:onClick="onClickGo"
+        android:text="@string/go" />
 
-    <Button
-        android:id="@+id/four"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/five"
-        android:onClick="onClickFour"
-        android:text="Four" />
-
-    <Button
-        android:id="@+id/three"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/four"
-        android:onClick="onClickThree"
-        android:text="Three" />
-
-    <Button
-        android:id="@+id/two"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/three"
-        android:onClick="onClickTwo"
-        android:text="Two" />
-
-    <Button
-        android:id="@+id/one"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/two"
-        android:onClick="onClickOne"
-        android:text="One" />
 </RelativeLayout>
