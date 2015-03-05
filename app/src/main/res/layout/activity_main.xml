@@ -8,16 +8,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <com.teinproductions.tein.dice.DieView
-        android:id="@+id/die_view1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <com.teinproductions.tein.dice.DieView
-        android:id="@+id/die_view2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/die_view1" />
+        android:orientation="horizontal">
+
+        <com.teinproductions.tein.dice.DieView
+            android:id="@+id/die_view1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.teinproductions.tein.dice.DieView
+            android:id="@+id/die_view2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/dance_button"

@@ -3,10 +3,9 @@ package com.teinproductions.tein.dice;
 import android.content.Context;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.util.AttributeSet;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-public class DieView extends FrameLayout {
+public class DieView extends ImageView {
 
     public static final int ONE = 1;
     public static final int TWO = 2;
@@ -16,7 +15,6 @@ public class DieView extends FrameLayout {
     public static final int SIX = 6;
 
     private int pips = ONE;
-    private ImageView mImageView;
     private AnimatedVectorDrawable mDrawable;
     private int drawableResource = R.drawable.anim_1to2;
 
@@ -52,7 +50,7 @@ public class DieView extends FrameLayout {
         }
 
         mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(drawableResource);
-        mImageView.setBackground(mDrawable);
+        this.setImageDrawable(mDrawable);
         mDrawable.start();
         this.pips = pips;
     }
@@ -204,13 +202,10 @@ public class DieView extends FrameLayout {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mImageView = new ImageView(getContext());
+        this.setAdjustViewBounds(true);
         mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
-        this.pips = ONE;
 
-        mImageView.setBackground(mDrawable);
-        LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        this.addView(mImageView, params);
+        this.setImageDrawable(mDrawable);
     }
 
     public DieView(Context context, AttributeSet attrs) {

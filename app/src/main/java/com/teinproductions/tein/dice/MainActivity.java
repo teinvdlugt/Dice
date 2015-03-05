@@ -3,13 +3,14 @@ package com.teinproductions.tein.dice;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 
 public class MainActivity extends Activity {
+
+    private static final String PIPS_1 = "PIPS_OF_DIE_VIEW_1";
+    private static final String PIPS_2 = "PIPS_OF_DIE_VIEW_2";
 
     private DieView dieView1, dieView2;
     private Button danceButton;
@@ -25,29 +26,7 @@ public class MainActivity extends Activity {
         dieView1 = (DieView) findViewById(R.id.die_view1);
         dieView2 = (DieView) findViewById(R.id.die_view2);
         danceButton = (Button) findViewById(R.id.dance_button);
-    }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void onClickGo(View view) {
@@ -68,6 +47,14 @@ public class MainActivity extends Activity {
             dancing = true;
             danceButton.setText(R.string.stop_dancing);
         }
+    }
+
+    @Override
+    protected void onPause() {
+        if (dancer != null) {
+            dancer.cancel(true);
+        }
+        super.onPause();
     }
 
     class Dancer extends AsyncTask<Void, Void, Void> {
