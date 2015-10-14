@@ -1,19 +1,16 @@
 package com.teinproductions.tein.dice;
 
-import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 
-public class MainActivity extends Activity {
-
+public class MainActivity extends AppCompatActivity {
     private static final String PIPS_1 = "PIPS_OF_DIE_VIEW_1";
     private static final String PIPS_2 = "PIPS_OF_DIE_VIEW_2";
 
     private DieView dieView1, dieView2;
-    private Button danceButton;
 
     private boolean dancing = false;
     private Dancer dancer;
@@ -25,8 +22,6 @@ public class MainActivity extends Activity {
 
         dieView1 = (DieView) findViewById(R.id.die_view1);
         dieView2 = (DieView) findViewById(R.id.die_view2);
-        danceButton = (Button) findViewById(R.id.dance_button);
-
     }
 
     public void onClickGo(View view) {
@@ -39,13 +34,11 @@ public class MainActivity extends Activity {
     public void onClickDance(View view) {
         if (dancing) {
             dancer.cancel(true);
-            danceButton.setText(R.string.dance);
             dancing = false;
         } else {
             dancer = new Dancer();
             dancer.execute();
             dancing = true;
-            danceButton.setText(R.string.stop_dancing);
         }
     }
 
