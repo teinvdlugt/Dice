@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,39 +6,59 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/buttonPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:orientation="horizontal">
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
 
-        <com.teinproductions.tein.dice.DieView
-            android:id="@+id/die_view1"
-            android:layout_width="0dp"
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_margin="16dp"
+            android:onClick="onClickRemove"
+            android:src="@drawable/ic_remove_36dp"
+            app:fabSize="normal" />
 
-        <com.teinproductions.tein.dice.DieView
-            android:id="@+id/die_view2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="16dp"
+                android:onClick="onClickDance"
+                android:src="@drawable/ic_mood_36dp"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:onClick="onClickGo"
+                android:src="@drawable/ic_arrow_forward_36dp"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="16dp"
+                android:onClick="onClickAdd"
+                android:src="@drawable/ic_add_36dp"
+                app:fabSize="normal" />
+        </FrameLayout>
     </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
+    <com.teinproductions.tein.dice.DieContainer
+        android:id="@+id/dieContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_margin="16dp"
-        android:onClick="onClickDance"
-        android:src="@drawable/ic_mood_36dp"
-        app:fabSize="normal" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:onClick="onClickGo"
-        android:src="@drawable/ic_arrow_forward_36dp"
-        app:fabSize="normal" />
-</FrameLayout>
+        android:layout_above="@id/buttonPanel"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp" />
+</RelativeLayout>

@@ -10,25 +10,21 @@ public class MainActivity extends AppCompatActivity {
     private static final String PIPS_1 = "PIPS_OF_DIE_VIEW_1";
     private static final String PIPS_2 = "PIPS_OF_DIE_VIEW_2";
 
-    private DieView dieView1, dieView2;
-
     private boolean dancing = false;
     private Dancer dancer;
+    private DieContainer dieContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dieView1 = (DieView) findViewById(R.id.die_view1);
-        dieView2 = (DieView) findViewById(R.id.die_view2);
+        dieContainer = (DieContainer) findViewById(R.id.dieContainer);
+        dieContainer.addDie();
     }
 
     public void onClickGo(View view) {
-        final int pips1 = (int) Math.floor(Math.random() * 6) + 1;
-        final int pips2 = (int) Math.floor(Math.random() * 6) + 1;
-        dieView1.setPips(pips1);
-        dieView2.setPips(pips2);
+        dieContainer.goRandom();
     }
 
     public void onClickDance(View view) {
@@ -42,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onClickAdd(View view) {
+        dieContainer.addDie();
+    }
+
+    public void onClickRemove(View view) {
+        dieContainer.removeDie();
+    }
+
     @Override
     protected void onPause() {
         if (dancer != null) {
@@ -51,10 +55,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class Dancer extends AsyncTask<Void, Void, Void> {
-
         @Override
         protected Void doInBackground(Void... params) {
-
             //noinspection ConstantConditions
             while (1 + 1 == 2) {
                 if (isCancelled()) {

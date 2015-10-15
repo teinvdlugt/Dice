@@ -2,6 +2,7 @@ package com.teinproductions.tein.dice;
 
 import android.content.Context;
 import android.graphics.drawable.AnimatedVectorDrawable;
+import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -20,6 +21,10 @@ public class DieView extends ImageView {
 
     public int getPips() {
         return pips;
+    }
+
+    public void setRandomPips() {
+        setPips((int) (Math.random() * 6 + 1));
     }
 
     public void setPips(int pips) {
@@ -203,8 +208,29 @@ public class DieView extends ImageView {
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         this.setAdjustViewBounds(true);
-        mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.anim_1to2);
 
+        @DrawableRes int initDrawable = R.drawable.anim_1to2;
+        switch (pips) {
+            case ONE:
+                initDrawable = R.drawable.anim_1to2;
+                break;
+            case TWO:
+                initDrawable = R.drawable.anim_2to1;
+                break;
+            case THREE:
+                initDrawable = R.drawable.anim_3to1;
+                break;
+            case FOUR:
+                initDrawable = R.drawable.anim_4to1;
+                break;
+            case FIVE:
+                initDrawable = R.drawable.anim_5to1;
+                break;
+            case SIX:
+                initDrawable = R.drawable.anim_6to1;
+        }
+
+        mDrawable = (AnimatedVectorDrawable) getResources().getDrawable(initDrawable);
         this.setImageDrawable(mDrawable);
     }
 
